@@ -2,7 +2,7 @@
 
 This launch file is intended only to visualize Atlas.  To use, run:
 
-   ros2 launch robots viewatlas.launch.py
+   ros2 launch 133finalproject viewatlas.launch.py
 
 This should start
   1) RVIZ, ready to view the robot
@@ -33,7 +33,7 @@ def generate_launch_description():
     # LOCATE FILES
     
     # Define the package.
-    package = 'atlas_description'
+    package = '133finalproject'
 
     # Locate the RVIZ configuration file.
     rvizcfg = os.path.join(pkgdir(package), 'rviz/viewatlas.rviz')

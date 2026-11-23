@@ -22,5 +22,7 @@ setup(
     description='133 final project package',
     license='TODO',
     tests_require=['pytest'],
-    entry_points={'console_scripts': []},
+    entry_points={'console_scripts': [
+        'squat = 133finalproject.squat:main',
+    ]},
 )

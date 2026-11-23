@@ -19,6 +19,12 @@ creating /home/ubuntu/133finalproject/install/133finalproject/share/ament_index/
 copying resource/133finalproject -> /home/ubuntu/133finalproject/install/133finalproject/share/ament_index/resource_index/packages
 copying package.xml -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject
 creating /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/launch
+copying launch/viewatlas.launch.py -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/launch
 copying launch/project.launch.py -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/launch
 creating /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/urdf
+copying urdf/atlas_v5.urdf -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/urdf
 copying urdf/val_valkyrie_D.urdf -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/urdf
+creating /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/rviz
+copying rviz/viewurdf.rviz -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/rviz
+copying rviz/urdf.rviz -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/rviz
+copying rviz/viewatlas.rviz -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/rviz

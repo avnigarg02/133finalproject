@@ -1,0 +1,60 @@
+[0.716s] Invoking command in '/home/ubuntu/133finalproject/build/133finalproject': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ubuntu/133finalproject/build/133finalproject/prefix_override:/home/ubuntu/133finalproject/install/133finalproject/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/133finalproject/build/133finalproject/build --no-deps install_data
+[0.948s] running develop
+[0.948s] /usr/lib/python3/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[0.948s] !!
+[0.948s] 
+[0.948s]         ********************************************************************************
+[0.948s]         Please avoid running ``setup.py`` and ``easy_install``.
+[0.948s]         Instead, use pypa/build, pypa/installer or other
+[0.948s]         standards-based tools.
+[0.948s] 
+[0.948s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[0.948s]         ********************************************************************************
+[0.948s] 
+[0.948s] !!
+[0.948s]   easy_install.initialize_options(self)
+[0.975s] /usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[0.975s] !!
+[0.975s] 
+[0.975s]         ********************************************************************************
+[0.975s]         Please avoid running ``setup.py`` directly.
+[0.975s]         Instead, use pypa/build, pypa/installer or other
+[0.975s]         standards-based tools.
+[0.975s] 
+[0.975s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[0.975s]         ********************************************************************************
+[0.975s] 
+[0.975s] !!
+[0.975s]   self.initialize_options()
+[1.059s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[1.059s]   self.local_index = Environment(self.shadow_path + sys.path)
+[1.086s] running egg_info
+[1.086s] creating 133finalproject.egg-info
+[1.100s] writing 133finalproject.egg-info/PKG-INFO
+[1.100s] writing dependency_links to 133finalproject.egg-info/dependency_links.txt
+[1.100s] writing requirements to 133finalproject.egg-info/requires.txt
+[1.100s] writing top-level names to 133finalproject.egg-info/top_level.txt
+[1.100s] writing manifest file '133finalproject.egg-info/SOURCES.txt'
+[1.127s] reading manifest file '133finalproject.egg-info/SOURCES.txt'
+[1.127s] writing manifest file '133finalproject.egg-info/SOURCES.txt'
+[1.142s] running build_ext
+[1.142s] Creating /home/ubuntu/133finalproject/install/133finalproject/lib/python3.12/site-packages/133finalproject.egg-link (link to .)
+[1.142s] 
+[1.142s] Installed /home/ubuntu/133finalproject/build/133finalproject
+[1.142s] running install_data
+[1.143s] creating /home/ubuntu/133finalproject/install/133finalproject/share/ament_index
+[1.143s] creating /home/ubuntu/133finalproject/install/133finalproject/share/ament_index/resource_index
+[1.143s] creating /home/ubuntu/133finalproject/install/133finalproject/share/ament_index/resource_index/packages
+[1.143s] copying resource/133finalproject -> /home/ubuntu/133finalproject/install/133finalproject/share/ament_index/resource_index/packages
+[1.143s] copying package.xml -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject
+[1.143s] creating /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/launch
+[1.143s] copying launch/viewatlas.launch.py -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/launch
+[1.143s] copying launch/project.launch.py -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/launch
+[1.143s] creating /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/urdf
+[1.143s] copying urdf/atlas_v5.urdf -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/urdf
+[1.143s] copying urdf/val_valkyrie_D.urdf -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/urdf
+[1.143s] creating /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/rviz
+[1.143s] copying rviz/viewurdf.rviz -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/rviz
+[1.143s] copying rviz/urdf.rviz -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/rviz
+[1.143s] copying rviz/viewatlas.rviz -> /home/ubuntu/133finalproject/install/133finalproject/share/133finalproject/rviz
+[1.166s] Invoked command in '/home/ubuntu/133finalproject/build/133finalproject' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ubuntu/133finalproject/build/133finalproject/prefix_override:/home/ubuntu/133finalproject/install/133finalproject/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/133finalproject/build/133finalproject/build --no-deps install_data

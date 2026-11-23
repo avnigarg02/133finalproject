@@ -3,13 +3,6 @@
    Make Atlas squat: the feet stay planted on the ground while the
    pelvis moves down and back up.
 
-   Idea:  Keep the pelvis upright and lower it by d(t) in the world.
-   Relative to the pelvis, each foot must then RISE by d(t) while
-   keeping its orientation.  Solve that with velocity IK (Jacobian
-   inverse + error feedback) on two 6-DOF chains, pelvis->l_foot and
-   pelvis->r_foot.  The pelvis motion itself is broadcast as the
-   world->pelvis TF.
-
    Node:        /squat
    Publish:     /joint_states           sensor_msgs/JointState
    Broadcast:   world -> pelvis         TF
@@ -30,7 +23,6 @@ from utils.TransformHelpers     import *
 from hw5code.KinematicChain     import KinematicChain
 
 
-# All movable joints in the URDF (robot_state_publisher needs every one).
 ALLJOINTS = [
     'back_bkx', 'back_bky', 'back_bkz', 'neck_ry',
     'l_arm_elx', 'l_arm_ely', 'l_arm_shx', 'l_arm_shz',
@@ -41,7 +33,7 @@ ALLJOINTS = [
     'r_leg_hpz', 'r_leg_hpx', 'r_leg_hpy', 'r_leg_kny', 'r_leg_aky', 'r_leg_akx',
 ]
 
-# Leg joints in CHAIN ORDER (pelvis -> foot), as KinematicChain expects.
+# Leg joints in CHAIN ORDER
 def legjoints(side):
     return [f'{side}_leg_{j}' for j in ['hpz', 'hpx', 'hpy', 'kny', 'aky', 'akx']]
 
@@ -52,10 +44,10 @@ class SquatNode(Node):
         self.future = future
 
         # Squat parameters.
-        self.depth  = 0.25      # How far the pelvis drops (m)
-        self.period = 4.0       # Seconds per squat (down + up)
-        self.reps   = 3         # Number of squats, then stop
-        self.lam    = 20.0      # IK error-feedback gain
+        self.depth  = 0.25      
+        self.period = 4.0       
+        self.reps   = 3         
+        self.lam    = 20.0      
 
         # Kinematic chains for both legs.
         self.legs = {}
@@ -63,8 +55,6 @@ class SquatNode(Node):
             names = legjoints(side)
             chain = KinematicChain(self, 'pelvis', f'{side}_foot', names)
 
-            # Start with slightly bent knees (straight legs are singular).
-            # hip pitch + knee + ankle pitch = 0 keeps the foot flat.
             q0 = np.array([0.0, 0.0, -0.3, 0.6, -0.3, 0.0])
             (p0, R0, _, _) = chain.fkin(q0)
 
@@ -105,7 +95,6 @@ class SquatNode(Node):
         d    = 0.5 * self.depth * (1 - cos(w * self.t))
         ddot = 0.5 * self.depth * w * sin(w * self.t)
 
-        # Solve IK for each leg: foot rises by d relative to the pelvis.
         for leg in self.legs.values():
             pd = leg['p0'] + np.array([0.0, 0.0, d])
             vd = np.array([0.0, 0.0, ddot])

@@ -1,0 +1,41 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  easy_install.initialize_options(self)
+/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+  self.local_index = Environment(self.shadow_path + sys.path)
+running egg_info
+writing 133finalproject.egg-info/PKG-INFO
+writing dependency_links to 133finalproject.egg-info/dependency_links.txt
+writing requirements to 133finalproject.egg-info/requires.txt
+writing top-level names to 133finalproject.egg-info/top_level.txt
+reading manifest file '133finalproject.egg-info/SOURCES.txt'
+writing manifest file '133finalproject.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ubuntu/133finalproject/install/133finalproject/lib/python3.12/site-packages/133finalproject.egg-link (link to .)
+
+Installed /home/ubuntu/133finalproject/build/133finalproject
+running install_data
